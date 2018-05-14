@@ -1,27 +1,19 @@
-ho-ansible/R
-=========
+# Ansible role: R
+Statistical software: 
+base R runtime only, no extra packages.
 
-R statistical software
+## Requirements
+Only tested on Debian stable, for now.
 
-Requirements
-------------
-
-Only on Debian stable, for now.
-
-Role Variables
---------------
-
+## Role Variables
 + `cran_key`: PGP key for verifying packages
 + `cran_mirror`: URL from which to download packages, see [mirror list](https://cran.r-project.org/mirrors.html)
-+ `cran_ver`: R version, e.g., `cran34` for R v3.4.x
++ `cran_ver`: R version, e.g., `cran35` for R v3.5.x
 
-Dependencies
-------------
-
+## Dependencies
 None.
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```
 - hosts: R
@@ -29,12 +21,8 @@ Example Playbook
     - { role: ho-ansible.R }
 ```
 
-License
--------
-
+## License
 MIT
 
-Author Information
-------------------
-
+## Author Information
 Sean Ho, https://github.com/ho-ansible/
