@@ -1,4 +1,4 @@
 ---
-cran_key: E19F5F87128899B192B1A2C2AD5F960A256A04AF
-cran_repo: "deb {{ cran_mirror }}/bin/linux/debian {{ ansible_distribution_release }}-{{ cran_ver }}/"
+R_cran_key: E19F5F87128899B192B1A2C2AD5F960A256A04AF
+R_cran_repo: "deb {{ R_cran_mirror }}/bin/linux/debian {{ ansible_distribution_release }}-{{ R_cran_ver }}/"
   

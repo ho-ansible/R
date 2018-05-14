@@ -5,13 +5,13 @@
   - apt
   apt_key:
     keyserver: keys.gnupg.net
-    id: "{{ cran_key }}"
+    id: "{{ R_cran_key }}"
 
 - name: R | repository (CRAN)
   tags:
   - apt
   apt_repository:
-    repo: "{{ cran_repo }}"
+    repo: "{{ R_cran_repo }}"
     filename: 'cran'
 
 - name: R | Install packages

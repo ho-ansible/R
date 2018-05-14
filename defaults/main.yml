@@ -1,3 +1,3 @@
 ---
-cran_mirror: "http://cran.utstat.utoronto.ca/"
-cran_ver: cran35
+R_cran_mirror: "http://cran.utstat.utoronto.ca/"
+R_cran_ver: cran35
