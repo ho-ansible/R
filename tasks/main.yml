@@ -21,8 +21,3 @@
     name: 
       - r-base-dev
       - libopenblas-base
-
-# /usr/bin/Rscript -e 'install.packages("tidyverse", repos="http://cran.us.r-project.org")'
-
-# chooseCRANmirror()
-# install.packages("Matrix", "Rcpp", "RcppEigen")

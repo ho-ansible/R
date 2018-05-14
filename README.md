@@ -2,6 +2,11 @@
 Statistical software: 
 base R runtime only, no extra packages.
 
+You may install packages manually via, e.g.
+```
+/usr/bin/Rscript -e 'install.packages("tidyverse", repos="http://cran.us.r-project.org")'
+```
+
 ## Requirements
 Only tested on Debian stable, for now.
 
