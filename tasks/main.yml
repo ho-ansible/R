@@ -22,3 +22,8 @@
       - r-base-dev
       - libopenblas-base
       - r-cran-littler
+
+- name: R | additional R packages
+  tags:
+    - package
+  command: "{{ R_installer }} -r {{ R_cran_mirror }} {{ R_packages | join(' ') }}"
