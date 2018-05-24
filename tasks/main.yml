@@ -21,4 +21,4 @@
     name: 
       - r-base-dev
       - libopenblas-base
-      - littler
+      - r-cran-littler
