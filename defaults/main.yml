@@ -1,3 +1,8 @@
 ---
 R_cran_mirror: "http://cran.utstat.utoronto.ca/"
 R_cran_ver: cran35
+# e.g., tidyverse
+R_packages: []
+
+# First entry on .libPaths() in Debian, trailing slash
+R_libloc: /usr/local/lib/R/site-library/

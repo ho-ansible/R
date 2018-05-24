@@ -21,3 +21,25 @@
     name: 
       - r-base-dev
       - libopenblas-base
+      - r-cran-littler
+
+- name: R | littler config
+  tags:
+    - config
+  template:
+    src: little.r.j2
+    dest: /etc/littler.r
+
+- name: R | update R packages
+  tags:
+    - update
+  command: "{{ R_updater }}"
+
+- name: R | install R packages
+  tags:
+    - package
+  command: "{{ R_installer }} {{ item }}"
+  args:
+    creates: "{{ R_libloc ~ item }}"
+  loop: "{{ R_packages }}"
+
