@@ -46,7 +46,7 @@
 - name: R | install R packages from github
   tags:
     - package
-  command: "{{ R_installGithub }} {{ item }}"
+  command: "{{ R_github_installer }} {{ item }}"
   args:
     creates: "{{ R_libloc ~ item }}"
   loop: "{{ R_github_packages }}"

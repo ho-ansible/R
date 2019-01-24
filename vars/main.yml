@@ -6,5 +6,5 @@ R_cran_repo: "deb {{ R_cran_mirror }}/bin/linux/debian stretch-{{ R_cran_ver }}/
 # See http://dirk.eddelbuettel.com/code/littler.examples.html
 R_littler: /usr/lib/R/site-library/littler/examples
 R_installer: "{{ R_littler }}/install.r"
-R_updater: "{{ R_littler }}/updater.r"
-R_installGithub: "{{ R_littler }}/installGithub.r"
+R_updater: "{{ R_littler }}/update.r"
+R_github_installer: "{{ R_littler }}/installGithub.r"
