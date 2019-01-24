@@ -4,6 +4,7 @@ R_cran_ver: cran35
 R_packages: 
   - future
   - tidyverse
+R_github_packages:
 
 # First entry on .libPaths() in Debian, trailing slash
 R_libloc: /usr/local/lib/R/site-library/
