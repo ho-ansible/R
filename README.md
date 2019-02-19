@@ -13,6 +13,8 @@ Only tested on Debian stable, for now.
 ## Role Variables
 + `R_cran_mirror`: URL from which to download packages, see [mirror list](https://cran.r-project.org/mirrors.html)
 + `R_cran_ver`: R version, e.g., `cran35` for R v3.5.x
++ `R_packages` (default: future, tidyverse): R packages to install 
++ `R_github_packages` (default: none): R packages to install from Github
 
 ## Dependencies
 None.

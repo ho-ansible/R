@@ -1,8 +1,10 @@
 ---
 R_cran_key: E19F5F87128899B192B1A2C2AD5F960A256A04AF
-R_cran_repo: "deb {{ R_cran_mirror }}/bin/linux/debian {{ ansible_distribution_release }}-{{ R_cran_ver }}/"
+R_cran_repo: "deb {{ R_cran_mirror }}/bin/linux/debian stretch-{{ R_cran_ver }}/"
   
 # as installed by r-cran-littler
 # See http://dirk.eddelbuettel.com/code/littler.examples.html
-R_installer: /usr/lib/R/site-library/littler/examples/install.r
-R_updater: /usr/lib/R/site-library/littler/examples/update.r
+R_littler: /usr/lib/R/site-library/littler/examples
+R_installer: "{{ R_littler }}/install.r"
+R_updater: "{{ R_littler }}/update.r"
+R_github_installer: "{{ R_littler }}/installGithub.r"
