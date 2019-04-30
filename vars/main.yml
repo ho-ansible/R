@@ -8,3 +8,9 @@ R_littler: /usr/lib/R/site-library/littler/examples
 R_installer: "{{ R_littler }}/install.r"
 R_updater: "{{ R_littler }}/update.r"
 R_github_installer: "{{ R_littler }}/installGithub.r"
+
+R_base_packages:
+  - r-base-core
+  - r-base-dev
+  - libopenblas-dev
+  - r-cran-littler

@@ -18,10 +18,8 @@
   tags:
   - package
   package:
-    name: 
-      - r-base-dev
-      - libopenblas-dev
-      - r-cran-littler
+    name: "{{ item }}"
+  loop: "{{ R_base_packages }}"
 
 - name: R | littler config
   tags:
