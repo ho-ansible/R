@@ -19,7 +19,7 @@
   - package
   package:
     name: "{{ item }}"
-  loop: "{{ R_base_packages }}"
+  loop: "{{ R_base_packages + R_apt_packages }}"
 
 - name: R | littler config
   tags:
