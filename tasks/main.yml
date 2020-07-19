@@ -18,8 +18,8 @@
   tags:
   - package
   package:
-    name: "{{ item }}"
-  loop: "{{ R_base_packages + R_apt_packages }}"
+    name: "{{ R_base_packages + R_apt_packages }}"
+    state: latest
 
 - name: R | littler config
   tags:
