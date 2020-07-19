@@ -18,7 +18,7 @@
   tags:
   - package
   package:
-    name: "{{ R_base_packages + R_apt_packages }}"
+    name: "{{ R_base_pkgs + R_prereq_pkgs }}"
     state: latest
 
 - name: R | littler config
@@ -28,18 +28,13 @@
     src: little.r.j2
     dest: /etc/littler.r
 
-- name: R | update R packages
-  tags:
-    - update
-  command: "{{ R_updater }}"
-
 - name: R | install R packages
   tags:
     - package
   command: "{{ R_installer }} {{ item }}"
   args:
     creates: "{{ R_libloc ~ item }}"
-  loop: "{{ R_packages }}"
+  loop: "{{ R_pkgs }}"
 
 - name: R | install R packages from github
   tags:
@@ -47,5 +42,10 @@
   command: "{{ R_github_installer }} {{ item }}"
   args:
     creates: "{{ R_libloc ~ item }}"
-  loop: "{{ R_github_packages }}"
+  loop: "{{ R_github_pkgs }}"
+
+- name: R | update R packages
+  tags:
+    - update
+  command: "{{ R_updater }}"
 

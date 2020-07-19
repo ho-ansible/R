@@ -1,20 +1,17 @@
 # Ansible role: R
-Statistical software: 
-base R runtime only, no extra packages.
-
-You may install packages manually via, e.g.
-```
-/usr/lib/R/site-packages/littler/examples/install.r tidyverse
-```
+Statistical software
 
 ## Requirements
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `R_cran_mirror`: URL from which to download packages, see [mirror list](https://cran.r-project.org/mirrors.html)
-+ `R_cran_ver`: R version, e.g., `cran35` for R v3.5.x
-+ `R_packages` (default: future, tidyverse): R packages to install 
-+ `R_github_packages` (default: none): R packages to install from Github
++ `R_cran_mirror` (default: http://cloud.r-project.org/)
++ `R_cran_ver` (default: cran40): R version
++ `R_pkgs` (default: docopt): list of R packages to install from CRAN
+  `docopt` is a prerequisite for littler's `update.r` script.
++ `R_github_pkgs` (default: none): list of R packages to install from Github
++ `R_prereq_pkgs` (default: none): OS (not R) packages needed by any of
+  the above R packages
 
 ## Dependencies
 None.
