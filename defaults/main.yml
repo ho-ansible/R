@@ -1,6 +1,6 @@
 ---
-R_cran_mirror: "http://cran.utstat.utoronto.ca/"
-R_cran_ver: cran35
+R_cran_mirror: "http://cloud.r-project.org/"
+R_cran_ver: cran40
 R_apt_packages:
   - libxml2-dev
   - libssl-dev
