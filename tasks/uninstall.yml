@@ -10,6 +10,11 @@
     filename: 'cran'
     state: absent
 
+- name: R | remove repo key
+  apt_key:
+    id: "{{ R_cran_key }}"
+    state: absent
+
 - name: R | remove files
   file:
     path: "{{ item }}"
