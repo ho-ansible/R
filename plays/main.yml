@@ -1,0 +1,10 @@
+#! /usr/bin/env ansible-playbook
+# Configure R statistical software
+# Replace 'R' with your own inventory group
+---
+- name: R | statistical software
+  hosts: R
+  roles:
+  - role: R
+    tags:
+    - R

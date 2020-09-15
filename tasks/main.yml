@@ -23,14 +23,14 @@
 
 - name: R | littler config
   tags:
-    - config
+  - config
   template:
     src: little.r.j2
     dest: /etc/littler.r
 
 - name: R | install R packages
   tags:
-    - package
+  - package
   command: "{{ R_installer }} {{ item }}"
   args:
     creates: "{{ R_libloc ~ item }}"
@@ -38,7 +38,7 @@
 
 - name: R | install R packages from github
   tags:
-    - package
+  - package
   command: "{{ R_github_installer }} {{ item }}"
   args:
     creates: "{{ R_libloc ~ item }}"
@@ -46,6 +46,6 @@
 
 - name: R | update R packages
   tags:
-    - update
+  - update
   command: "{{ R_updater }}"
 

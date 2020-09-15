@@ -1,0 +1,12 @@
+#! /usr/bin/env ansible-playbook
+# Uninstall R statistical software
+# Replace 'R' with your own inventory group
+---
+- name: R | uninstall
+  hosts: R
+  tasks:
+  - include_role:
+      name: R
+      tasks_from: uninstall.yml
+    tags:
+    - R

@@ -1,0 +1,19 @@
+---
+- name: R | uninstall packages
+  package:
+    name: "{{ R_base_pkgs + R_prereq_pkgs }}"
+    state: absent
+
+- name: R | remove repo
+  apt_repository:
+    repo: "{{ R_cran_repo }}"
+    filename: 'cran'
+    state: absent
+
+- name: R | remove files
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+  - /etc/littler.r
+  - "{{ R_libloc }}"

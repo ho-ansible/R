@@ -10,6 +10,6 @@ R_updater: "{{ R_littler }}/update.r"
 R_github_installer: "{{ R_littler }}/installGithub.r"
 
 R_base_pkgs:
-  - libopenblas-dev
-  - r-base-dev
-  - r-cran-littler
+- libopenblas-dev
+- r-base-dev
+- r-cran-littler
