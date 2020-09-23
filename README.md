@@ -13,16 +13,11 @@ Only tested on Debian stable, for now.
 + `R_prereq_pkgs` (default: none): OS (not R) packages needed by any of
   the above R packages
 
+## Playbooks
++ `main.yml`: apply role
+
 ## Dependencies
 None.
-
-## Example Playbook
-
-```
-- hosts: R
-  roles:
-    - { role: ho-ansible.R }
-```
 
 ## License
 MIT
