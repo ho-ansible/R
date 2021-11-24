@@ -3,9 +3,9 @@
 - name: R | APT key (CRAN)
   tags:
   - apt
-  apt_key:
-    keyserver: keys.gnupg.net
-    id: "{{ R_cran_key }}"
+  get_url:
+    url: "{{ R_cran_keyurl }}"
+    dest: "{{ R_cran_keyring }}"
 
 - name: R | repository (CRAN)
   tags:

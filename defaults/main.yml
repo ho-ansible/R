@@ -1,5 +1,5 @@
 ---
-R_cran_mirror: "http://cloud.r-project.org/"
+R_cran_mirror: "http://cloud.r-project.org"
 R_cran_ver: cran40
 R_pkgs: 
 - docopt

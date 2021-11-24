@@ -10,11 +10,6 @@
     filename: 'cran'
     state: absent
 
-- name: R | remove repo key
-  apt_key:
-    id: "{{ R_cran_key }}"
-    state: absent
-
 - name: R | remove files
   file:
     path: "{{ item }}"
@@ -22,3 +17,4 @@
   loop:
   - /etc/littler.r
   - "{{ R_libloc }}"
+  - "{{ R_keyring }}"
