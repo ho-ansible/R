@@ -1,9 +1,4 @@
 ---
-R_cran_mirror: "http://cloud.r-project.org"
-R_cran_ver: cran40
-R_pkgs: 
-- docopt
-R_github_pkgs: []
-R_prereq_pkgs: []
+R_pkgs: []
+R_sys_pkgs: []
 
-R_libloc: /usr/local/lib/R/site-library/

@@ -2,16 +2,11 @@
 Statistical software
 
 ## Requirements
-Only tested on Debian stable, for now.
+Debian 10, 11.
 
 ## Role Variables
-+ `R_cran_mirror` (default: http://cloud.r-project.org/)
-+ `R_cran_ver` (default: cran40): R version
-+ `R_pkgs` (default: docopt): list of R packages to install from CRAN
-  `docopt` is a prerequisite for littler's `update.r` script.
-+ `R_github_pkgs` (default: none): list of R packages to install from Github
-+ `R_prereq_pkgs` (default: none): OS (not R) packages needed by any of
-  the above R packages
++ `R_pkgs` (default: none): list of R packages to install from CRAN
++ `R_sys_pkgs` (default: none): OS (not R) packages to install
 
 ## Playbooks
 + `main.yml`: apply role

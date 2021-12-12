@@ -14,38 +14,21 @@
     repo: "{{ R_cran_repo }}"
     filename: 'cran'
 
-- name: R | Install packages
+- name: R | Install system packages
   tags:
   - package
   package:
-    name: "{{ R_base_pkgs + R_prereq_pkgs }}"
+    name: 
+    - libopenblas-dev
+    - r-base-dev
+    - "{{ R_sys_pkgs }}"
     state: latest
-
-- name: R | littler config
-  tags:
-  - config
-  template:
-    src: little.r.j2
-    dest: /etc/littler.r
 
 - name: R | install R packages
   tags:
   - package
-  command: "{{ R_installer }} {{ item }}"
+  command: R -e 'install.packages(\"{{ item }}\")'
   args:
     creates: "{{ R_libloc ~ item }}"
   loop: "{{ R_pkgs }}"
-
-- name: R | install R packages from github
-  tags:
-  - package
-  command: "{{ R_github_installer }} {{ item }}"
-  args:
-    creates: "{{ R_libloc ~ item }}"
-  loop: "{{ R_github_pkgs }}"
-
-- name: R | update R packages
-  tags:
-  - update
-  command: "{{ R_updater }}"
 
