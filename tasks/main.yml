@@ -14,20 +14,34 @@
     repo: "{{ R_cran_repo }}"
     filename: 'cran'
 
-- name: R | Install system packages
+- name: R | Install base packages
   tags:
   - package
   package:
     name: 
     - libopenblas-dev
     - r-base-dev
-    - "{{ R_sys_pkgs }}"
     state: latest
+
+- name: R | Install additional system packages
+  tags:
+  - package
+  package:
+    name: "{{ R_sys_pkgs }}"
+    state: latest
+
+- name: R | system-wide config /etc/R/
+  tags:
+  - config
+  copy:
+    content: "{{ item.value }}"
+    dest: /etc/R/{{ item.key }}
+  loop: "{{ R_etc_R | dict2items }}"
 
 - name: R | install R packages
   tags:
   - package
-  command: R -e 'install.packages(\"{{ item }}\")'
+  command: R -q -e 'install.packages("{{ item }}", quiet = TRUE)'
   args:
     creates: "{{ R_libloc ~ item }}"
   loop: "{{ R_pkgs }}"
