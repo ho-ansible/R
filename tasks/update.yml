@@ -1,0 +1,6 @@
+---
+- name: R | update R packages
+  tags:
+  - package
+  command: R -s -e 'update.packages(ask = FALSE)'
+
