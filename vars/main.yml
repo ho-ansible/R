@@ -1,7 +1,7 @@
 ---
 R_cran_mirror: "http://cloud.r-project.org"
 R_cran_ver: cran40
-R_cran_repo: "deb {{ R_cran_mirror }}/bin/linux/debian {{ ansible_distribution_release }}-{{ R_cran_ver }}/"
+R_cran_repo: "deb [signed-by={{ R_cran_keyring }}] {{ R_cran_mirror }}/bin/linux/debian {{ ansible_distribution_release }}-{{ R_cran_ver }}/"
 R_cran_key: "0xB8F25A8A73EACF41"
 R_cran_keyurl: "https://keyserver.ubuntu.com/pks/lookup?op=get&search={{ R_cran_key }}"
 R_cran_keyring: /etc/apt/trusted.gpg.d/cran.asc
